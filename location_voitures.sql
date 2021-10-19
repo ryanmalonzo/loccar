@@ -80,18 +80,18 @@ INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise) VALUES ("Lomalot"
 
 
 /*Insertion table vehicule*/
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 107", "P107.json", "P107.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 208", "P208.json", "P208.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Renault Clio IV", "ClioIV.json", "ClioIV.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Dacia Duster", "Duster.json", "Duster.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Volkswagen Polo", "Polo.json", "Polo.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Audi A8", "AA8.json", "AA8.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Honda Civic", "Civic.json", "Civic.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Toyota Yaris", "Yaris.json", "Yaris.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Lexus NX", "LNX.json", "LNX.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Subaru Outback", "Outback.json", "Outback.png", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.png", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 107", "P107.json", "P107.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 208", "P208.json", "P208.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Renault Clio IV", "ClioIV.json", "ClioIV.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Dacia Duster", "Duster.json", "Duster.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Volkswagen Polo", "Polo.json", "Polo.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Audi A8", "AA8.json", "AA8.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Honda Civic", "Civic.json", "Civic.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Toyota Yaris", "Yaris.json", "Yaris.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Lexus NX", "LNX.json", "LNX.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", "disponible");
+INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
 
 
 
