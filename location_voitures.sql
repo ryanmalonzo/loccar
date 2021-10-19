@@ -102,7 +102,3 @@ INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Ci
 
 
 
-
-
-
-
