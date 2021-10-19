@@ -1,3 +1,5 @@
+/*Creation des tables de la base*/
+
 CREATE TABLE IF NOT EXISTS entreprise (
    idEntreprise INT AUTO_INCREMENT,
    adresseEntreprise VARCHAR(50) NOT NULL,
@@ -39,6 +41,28 @@ CREATE TABLE IF NOT EXISTS facture (
    FOREIGN KEY(idEntreprise) REFERENCES entreprise(idEntreprise)
 );
 
+/*Insertion de jeu de données*/
+
+/*Insertion table entreprise*/
 INSERT INTO entreprise (adresseEntreprise, nomEntreprise) VALUES ("23 rue de la paix, Paris 75014","FNAC");
-INSERT INTO client (nom, pseudo,motDePasse, idEntreprise) VALUES ("Dupont", "dupontPierre43", "GO/65st$", 1);
+INSERT INTO entreprise (adresseEntreprise, nomEntreprise) VALUES ("56 boulevard Jean Jaurès, Nantes 44010","Nestle");
+INSERT INTO entreprise (adresseEntreprise, nomEntreprise) VALUES ("178 avenue des champs, Lyon 69000","Crédit Agricole");
+INSERT INTO entreprise (adresseEntreprise, nomEntreprise) VALUES ("8,","");
+
+
+
+
+/*Insertion table client*/
+INSERT INTO client (nom, pseudo,motDePasse, idEntreprise) VALUES ("Dupont", "pierreDupont@fnac.com", "GO/65st$", 1);
+
+
+
+/*Insertion table vehicule*/
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 107", "107.json", "107.png", "disponible");
+
+
+
+
+
+
+
