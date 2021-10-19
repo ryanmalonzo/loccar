@@ -91,22 +91,5 @@ INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("To
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Lexus NX", "LNX.json", "LNX.jpg", "disponible");
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", "disponible");
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", "disponible");
-<<<<<<< HEAD
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
-=======
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> f4a5e6d... add images
