@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
    nom VARCHAR(50) NOT NULL,
    pseudo VARCHAR(30) NOT NULL,
    motDePasse VARCHAR(30) NOT NULL,
-   role VARCHAR(10) NOT NULL;
+   role VARCHAR(10) NOT NULL,
    idEntreprise INT NOT NULL,
    PRIMARY KEY(idUtilisateur),
    FOREIGN KEY(idEntreprise) REFERENCES entreprise(idEntreprise)
@@ -92,13 +92,3 @@ INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Le
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", "disponible");
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", "disponible");
 INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
-
-
-
-
-
-
-
-
-
-
