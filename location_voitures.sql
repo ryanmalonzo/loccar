@@ -61,7 +61,7 @@ INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("La
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Sauvilliers", "andreSauvilliers@nestle.com", "97w=(7k.g", 2, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Rages", "nathalieRages@nestle.com", "z18EuR0Mv", 2, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Belenteau", "rogerBelenteau@nestle.com", "|!8a>9k2w", 2, "client");
-INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Abanteau", "jeanAbanteau@nestle.com", "3JU2q79fxKrF", 2, "client")
+INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Abanteau", "jeanAbanteau@nestle.com", "3JU2q79fxKrF", 2, "client");
 
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Ranac", "sofiaRanac@creditagricole.com", "Jt3t3QdP3", 3, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Polastel", "arthurPolastel@creditagricole.com", "8>&st48w!", 3, "client");
