@@ -1,0 +1,16 @@
+- 1 formulaire d'inscription 
+(le meme pour tous les roles et gestion de qui se connecte depuis la bd)
+=> non abonnées + abonnées + loueur 
+
+loueur = celui qui gère le site + la flotte de voiture qui est dispo à la location
+
+les services : 
+- formulaire d'inscription (inscription, connexion, deconnexion) 
+- affichage avec toutes les voitures (vue client + vue loueur)
+- affichage des voitures louées 
+- selection/désélection des voitures qu'on veut louer ( disponible a partir de la page où toutes les voitures sont affichées)
+- affichage des voitures en cours de location de tous les clients (retrait d'une voiture depuis ce service)
+- ajout d'une voiture dans la base 
+
+- calcul des factures du mois
+- calcul des factures d'une entreprise 
