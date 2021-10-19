@@ -6,7 +6,7 @@
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
-  background: url(../../assets/img/meeting.jpg);
+  background: url("../../assets/img/why-kei-8e2gal_GIE8-unsplash.jpg") no-repeat;
   background-size: cover;
 }
 
