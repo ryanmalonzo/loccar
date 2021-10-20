@@ -29,7 +29,8 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nos véhicules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Utiliser nos services</a></li>
                 </ul><span class="navbar-text actions"><a class="login" href="#">Connexion</a><a class="btn btn-light action-button" role="button" href="#" style="background: #209cee;">Inscription</a> </span>
             </div>
         </div>
@@ -38,10 +39,15 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post">
-                <h2 class="text-center"><strong>Créez </strong>votre compte</h2>
-                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Adresse mail"></div>
-                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Mot de passe"></div>
-                <div class="mb-3"><input class="form-control" type="password" name="password-repeat" placeholder="Répétez votre mot de passe"></div>
+                <h2 class="text-center"><strong>Créez </strong>votre compte client</h2>
+                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Adresse mail" required=""></div>
+                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Mot de passe" required=""></div>
+                <div class="mb-3"><select class="form-select" required="">
+                        <option value="0" selected="" hidden="">Société</option>
+                        <option value="1">FNAC</option>
+                        <option value="2">Nestlé</option>
+                        <option value="3">Crédit Agricole</option>
+                    </select></div>
                 <div class="mb-3">
                     <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">J'accepte les&nbsp;<a href="#">conditions générales d'utilisation</a></label></div>
                 </div>
