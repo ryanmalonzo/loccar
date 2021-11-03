@@ -1,0 +1,50 @@
+Ce qui est fait
+
+- Template inscription
+- Template connexion
+- Template accueil
+
+- Inscription
+- Connexion
+- Déconnexion
+
+
+
+
+Ce qu'il reste à faire
+
+- Navbar changeante en fonction du statut (connecté/déconnecté)
+
+
+=> FONCTIONNALITES CLIENT
+
+- Affichage des modèles de voitures (+ quantité en stock)
+	* Ajouter au panier
+
+	$panier[idModele][qtCommandee]
+	$panier[idModele][dateDebut]
+	$panier[idModele][dateFin]
+
+- Validation du panier (création des factures)
+
+SELECT idVehicule FROM vehicule WHERE idModele = :idModele AND etatLocation = "disponible";
+
+
+Contexte : je suis client et je commande 2 véhicules d'un modèle
+tableau: idVehicule [4,32,1,3,5] => [4,32]
+
+UPDATE vehicule
+SET etatLocation = "location", idUtilisateur = :idUtilisateur
+WHERE idVehicule = :idVehicule;
+
+- Espace client
+	* Affichage des voitures en cours de location
+	* Affichage factures (+ possibilité de payer)
+
+
+=> FONCTIONNALITES ADMIN
+
+- Affichage des locations en cours pour chaque entreprise et pour chaque employé de l'entreprise
+- Formulaire d'ajout de voitures
+- Modification du nombre de voitures en stock pour un modèle (+/-)
+- Affichage de toutes les voitures louées pour une entreprise et du cumul des factures associées
