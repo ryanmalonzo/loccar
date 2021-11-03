@@ -19,27 +19,32 @@ CREATE TABLE IF NOT EXISTS utilisateur (
 );
 
 CREATE TABLE IF NOT EXISTS vehicule (
-   idVehicule INT AUTO_INCREMENT,
-   modele VARCHAR(50) NOT NULL,
-   caracteristiques VARCHAR(200) NOT NULL,
-   photo VARCHAR(200) NOT NULL,
+   idVehicule INT AUTO_INCREMENT,		
    etatLocation VARCHAR(50) NOT NULL,
    idUtilisateur INT,
+   idModele INT,
    PRIMARY KEY(idVehicule),
-   FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(idUtilisateur)
+   FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(idUtilisateur),
+   FOREIGN KEY(idModele) REFERENCES modele(idModele)
+);
+
+CREATE TABLE IF NOT EXISTS modele (
+	idModele INT AUTO_INCREMENT NOT NULL,
+	caracteristiques VARCHAR(200) NOT NULL,
+	photo VARCHAR(200) NOT NULL,
+	tarifJournalier INT NOT NULL, 
+	PRIMARY KEY(idModele)
 );
 
 CREATE TABLE IF NOT EXISTS facture (
    idUtilisateur INT AUTO_INCREMENT,
    idVehicule INT,
-   idEntreprise INT,
    dateDebut DATE NOT NULL,
    dateFin DATE,
    etatRetour VARCHAR(50) NOT NULL,
-   PRIMARY KEY(idUtilisateur, idVehicule, idEntreprise),
+   PRIMARY KEY(idUtilisateur, idVehicule),
    FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(idUtilisateur),
-   FOREIGN KEY(idVehicule) REFERENCES vehicule(idVehicule),
-   FOREIGN KEY(idEntreprise) REFERENCES entreprise(idEntreprise)
+   FOREIGN KEY(idVehicule) REFERENCES vehicule(idVehicule)
 );
 
 /*Insertion de jeu de données*/
