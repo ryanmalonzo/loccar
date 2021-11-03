@@ -18,23 +18,25 @@ CREATE TABLE IF NOT EXISTS utilisateur (
    FOREIGN KEY(idEntreprise) REFERENCES entreprise(idEntreprise)
 );
 
-CREATE TABLE IF NOT EXISTS vehicule (
-   idVehicule INT AUTO_INCREMENT,		
-   etatLocation VARCHAR(50) NOT NULL,
-   idUtilisateur INT,
-   idModele INT,
-   PRIMARY KEY(idVehicule),
-   FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(idUtilisateur),
-   FOREIGN KEY(idModele) REFERENCES modele(idModele)
-);
-
 CREATE TABLE IF NOT EXISTS modele (
 	idModele INT AUTO_INCREMENT NOT NULL,
+	nomModele VARCHAR(25) NOT NULL,
 	caracteristiques VARCHAR(200) NOT NULL,
 	photo VARCHAR(200) NOT NULL,
 	tarifJournalier INT NOT NULL, 
 	PRIMARY KEY(idModele)
 );
+
+CREATE TABLE IF NOT EXISTS vehicule (
+   idVehicule INT AUTO_INCREMENT,
+   idModele INT NOT NULL,   
+   etatLocation VARCHAR(50) NOT NULL,
+   idUtilisateur INT,
+   PRIMARY KEY(idVehicule),
+   FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(idUtilisateur),
+   FOREIGN KEY(idModele) REFERENCES modele(idModele)
+);
+
 
 CREATE TABLE IF NOT EXISTS facture (
    idUtilisateur INT AUTO_INCREMENT,
@@ -83,18 +85,61 @@ INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Bo
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Gailart", "julesGailart@loccar.com", "22+$!zyo1", 5, "admin");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Lomalot", "aurelienLomalot@loccar.com", "H7rZi336NbWn", 5, "admin");
 
+/* Insertion table modele*/
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 107", "P107.json", "P107.jpg", 112.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 208", "P208.json", "P208.jpg", 109.45);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Renault Clio IV", "ClioIV.json", "ClioIV.jpg", 123.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Dacia Duster", "Duster.json", "Duster.jpg", 137.20);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Volkswagen Polo", "Polo.json", "Polo.jpg", 145.70);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Audi A8", "AA8.json", "AA8.jpg", 176);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Honda Civic", "Civic.json", "Civic.jpg", 148.40);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Toyota Yaris", "Yaris.json", "Yaris.jpg", 129.90);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Lexus NX", "LNX.json", "LNX.jpg", 163.45);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", 133.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", 132.80);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", 129.40);
 
 /*Insertion table vehicule*/
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 107", "P107.json", "P107.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Peugeot 208", "P208.json", "P208.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Renault Clio IV", "ClioIV.json", "ClioIV.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Dacia Duster", "Duster.json", "Duster.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Volkswagen Polo", "Polo.json", "Polo.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Audi A8", "AA8.json", "AA8.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Honda Civic", "Civic.json", "Civic.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Toyota Yaris", "Yaris.json", "Yaris.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Lexus NX", "LNX.json", "LNX.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
-INSERT INTO vehicule (modele, caracteristiques, photo, etatLocation) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", "disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (1,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (1,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (1,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (2,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (2,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (3,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (3,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (3,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (3,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (3,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (4,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (4,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (4,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (4,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (5,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (5,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (5,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (6,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (6,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (6,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (6,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (7,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (8,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (8,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (8,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (9,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (9,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (9,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (10,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (12,"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (12"disponible");
+
+
+
+
+
+
+
+
+
