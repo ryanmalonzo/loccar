@@ -60,6 +60,11 @@ INSERT INTO entreprise (adresseEntreprise, nomEntreprise) VALUES ("44 rue de Ver
 
 
 /*Insertion table utilisateur*/
+INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Croilon", "georgesCroilon@loccar.com", "e%9^79!pv", 5, "admin");
+INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Bonnevès", "marieBonneves@loccar.com", "pXJzw21b49TM", 5, "admin");
+INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Gailart", "julesGailart@loccar.com", "22+$!zyo1", 5, "admin");
+INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Lomalot", "aurelienLomalot@loccar.com", "H7rZi336NbWn", 5, "admin");
+
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Dupont", "pierreDupont@fnac.com", "GO/65st$", 1, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Veret", "camilleVeret@fnac.com", "mpd000fnac", 1, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Bizeseul", "marcBizeseul@fnac.com", "Qcx9PQh65", 1, "client");
@@ -79,11 +84,6 @@ INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Ag
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Maiffet", "clarisseMaiffet@auchan.com", "9!:2=pmw7", 4, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Castemoux", "emmaCastemoux@auchan.com", "4S6tgs8QO6Zs", 4, "client");
 INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Dumeur", "mathisDumeur@auchan.com", "Fon7F1Z1j", 4, "client");
-
-INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Croilon", "georgesCroilon@loccar.com", "e%9^79!pv", 5, "admin");
-INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Bonnevès", "marieBonneves@loccar.com", "pXJzw21b49TM", 5, "admin");
-INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Gailart", "julesGailart@loccar.com", "22+$!zyo1", 5, "admin");
-INSERT INTO utilisateur (nom, pseudo,motDePasse, idEntreprise, role) VALUES ("Lomalot", "aurelienLomalot@loccar.com", "H7rZi336NbWn", 5, "admin");
 
 /* Insertion table modele*/
 INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 107", "P107.json", "P107.jpg", 112.60);
@@ -133,7 +133,7 @@ INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (11,"disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (12,"disponible");
-INSERT INTO vehicule (idModele, etatLocation) VALUES (12"disponible");
+INSERT INTO vehicule (idModele, etatLocation) VALUES (12,"disponible");
 
 
 
