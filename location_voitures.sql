@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
    idUtilisateur INT AUTO_INCREMENT,
    nom VARCHAR(50) NOT NULL,
    pseudo VARCHAR(30) NOT NULL,
-   motDePasse VARCHAR(30) NOT NULL,
+   motDePasse VARCHAR(50) NOT NULL,
    idEntreprise INT NOT NULL,
    role VARCHAR(10) NOT NULL,
    PRIMARY KEY(idUtilisateur),
