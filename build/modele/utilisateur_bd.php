@@ -1,7 +1,7 @@
 <?php
 
 function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
-    require "./modele/connect.php";
+    require_once "./modele/connect.php";
     $pdo = PDO();
 
     $sql = "SELECT * FROM utilisateur WHERE mail = :mail AND motDePasse = :motdepasse";
@@ -16,7 +16,7 @@ function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
         $exec = $cmd->execute();
         if ($exec) {
             $attributs = $cmd->fetchAll(PDO::FETCH_ASSOC);
-            return count($attributs) === 0;
+            return count($attributs) !== 0;
         }
         return false;
     } catch (PDOException $e) {
@@ -26,7 +26,7 @@ function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
 }
 
 function inserer($nom, $mail, $motdepasse, $societe) {
-    require "./modele/connect.php";
+    require_once "./modele/connect.php";
     $pdo = PDO();
 
     $sql = "INSERT INTO utilisateur VALUES (DEFAULT, :nom, :mail, :motdepasse, :societe, :role)";
