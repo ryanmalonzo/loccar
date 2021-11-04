@@ -11,7 +11,7 @@ function connexion() {
     if (isset($mail) && isset($motdepasse)) {
         require_once "./modele/utilisateur_bd.php";
 
-        if (get($mail, $motdepasse, $attributs)) {
+        if (get_utilisateur($mail, $motdepasse, $attributs)) {
             $_SESSION["utilisateur"] = $attributs[0];
             // Redirection TODO: tableau de bord
             header("Location: index.php");
@@ -46,14 +46,14 @@ function inscription() {
                 $_SESSION["utilisateur"] = array();
                 
                 // Récupérer l'utilisateur en BDD
-                get($mail, $motdepasse, $_SESSION["utilisateur"]);
+                get_utilisateur($mail, $motdepasse, $_SESSION["utilisateur"]);
                 
                 // Redirection TODO: tableau de bord
                 header("Location: index.php");
             }
 
             else {
-                $erreur = "Echec de l'inscription, Veuillez recommencer";
+                $erreur = "Échec de l'inscription, veuillez recommencer";
                 require "./vue/utilisateur/inscription.tpl";
             }
         }

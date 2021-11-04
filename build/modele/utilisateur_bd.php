@@ -1,6 +1,6 @@
 <?php
 
-function get($mail, $motdepasse, &$attributs = array()) {
+function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
     require "./modele/connect.php";
 
     $sql = "SELECT * FROM utilisateur WHERE mail = :mail AND motDePasse = :motdepasse";
