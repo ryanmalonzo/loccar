@@ -37,18 +37,6 @@
   color: #888;
 }
 
-.navigation-clean-button .navbar-nav a.active, .navigation-clean-button .navbar-nav > .show > a {
-  background: none;
-  box-shadow: none;
-}
-
-.navigation-clean-button.navbar-light .navbar-nav a.active, .navigation-clean-button.navbar-light .navbar-nav a.active:focus, .navigation-clean-button.navbar-light .navbar-nav a.active:hover {
-  color: #8f8f8f;
-  box-shadow: none;
-  background: none;
-  pointer-events: none;
-}
-
 .navigation-clean-button.navbar .navbar-nav .nav-link {
   padding-left: 18px;
   padding-right: 18px;
@@ -59,25 +47,8 @@
 }
 
 .navigation-clean-button.navbar-light .navbar-nav .nav-link:focus, .navigation-clean-button.navbar-light .navbar-nav .nav-link:hover {
+  color: #37434d !important;
   background-color: transparent;
-}
-
-.navigation-clean-button .navbar-nav > li > .dropdown-menu {
-  margin-top: -5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,.1);
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-.navigation-clean-button .dropdown-menu .dropdown-item:focus, .navigation-clean-button .dropdown-menu .dropdown-item {
-  line-height: 2;
-  font-size: 14px;
-  color: #37434d;
-}
-
-.navigation-clean-button .dropdown-menu .dropdown-item:focus, .navigation-clean-button .dropdown-menu .dropdown-item:hover {
-  background: #eee;
-  color: inherit;
 }
 
 .navigation-clean-button .actions .login {
