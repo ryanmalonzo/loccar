@@ -87,18 +87,18 @@ INSERT INTO utilisateur (nom, mail,motDePasse, idEntreprise, role) VALUES ("Cast
 INSERT INTO utilisateur (nom, mail,motDePasse, idEntreprise, role) VALUES ("Dumeur", "mathisDumeur@auchan.com", "e2509805892ecf78e3870368286e48cc30a68d96", 5, "client");
 
 /* Insertion table modele*/
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 107", '{"moteur":"4CV","boite de vitesse":"mecanique","carburant":"essence","nbPlaces":5}', "P107.jpg", 112.60);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 208", '{"moteur":"7CV","boite de vitesse":"Automatique","carburant":"Diesel","nbPlaces":5}', "P208.jpg", 109.45);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Renault Clio IV", '{"moteur":"4CV","boite de vitesse":"automatique","carburant":"bicarburant essence GPL","nbPlaces":5}', "ClioIV.jpg", 123.60);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Dacia Duster", '{"moteur":"6CV","boite de vitesse":"mecanique","carburant":"essence","nbPlaces":5}', "Duster.jpg", 137.20);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Volkswagen Polo", '{"moteur":"8CV","boite de vitesse":"mecanique","carburant":"essence","nbPlaces":5}', "Polo.jpg", 145.70);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Audi A8", '{"moteur":"18CV","boite de vitesse":"automatique","carburant":"hybride essence electrique","nbPlaces":5}', "AA8.jpg", 176);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Honda Civic", '{"moteur":"10CV","boite de vitesse":"automatique","carburant":"essence","nbPlaces":5}', "Civic.jpg", 148.40);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Toyota Yaris", '{"moteur":"6CV","boite de vitesse":"mecanique","carburant":"essence","nbPlaces":5}', "Yaris.jpg", 129.90);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Lexus NX", '{"moteur":"8CV","boite de vitesse":"mecanique","carburant":"diesel","nbPlaces":5}', "LNX.jpg", 163.45);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Skoda Fabia", '{"moteur":"5CV","boite de vitesse":"mecanique","carburant":"essence","nbPlaces":5}', "Fabia.jpg", 133.60);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Subaru Outback", '{"moteur":"9CV","boite de vitesse":"automatique","carburant":"essence","nbPlaces":5}', "Outback.jpg", 132.80);
-INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Citroen C3", '{"moteur":"5CV","boite de vitesse":"mecanique","carburant":"diesel","nbPlaces":5}', "CC3.jpg", 129.40);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 107", "P107.json", "P107.jpg", 112.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Peugeot 208", "P208.json", "P208.jpg", 109.45);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Renault Clio IV", "ClioIV.json", "ClioIV.jpg", 123.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Dacia Duster", "Duster.json", "Duster.jpg", 137.20);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Volkswagen Polo", "Polo.json", "Polo.jpg", 145.70);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Audi A8", "AA8.json", "AA8.jpg", 176);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Honda Civic", "Civic.json", "Civic.jpg", 148.40);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Toyota Yaris", "Yaris.json", "Yaris.jpg", 129.90);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Lexus NX", "LNX.json", "LNX.jpg", 163.45);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Skoda Fabia", "Fabia.json", "Fabia.jpg", 133.60);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Subaru Outback", "Outback.json", "Outback.jpg", 132.80);
+INSERT INTO modele (nomModele, caracteristiques, photo, tarifJournalier) VALUES ("Citroen C3", "CC3.json", "CC3.jpg", 129.40);
 
 /*Insertion table vehicule*/
 INSERT INTO vehicule (idModele, etatLocation) VALUES (1, "disponible");
@@ -135,12 +135,3 @@ INSERT INTO vehicule (idModele, etatLocation) VALUES (11, "disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (11, "disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (12, "disponible");
 INSERT INTO vehicule (idModele, etatLocation) VALUES (12, "disponible");
-
-
-
-
-
-
-
-
-
