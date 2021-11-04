@@ -3,7 +3,7 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link" href="index.php" style="color: rgb(255,255,255);">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);">Nos véhicules</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php?controle=voiture&action=liste" style="color: rgb(255,255,255);">Nos véhicules</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" style="color: rgb(255,255,255);">Utiliser nos services</a></li>
             </ul><span class="navbar-text actions"><a class="login" href="index.php?controle=utilisateur&action=connexion">Connexion</a><a class="btn btn-light action-button" role="button" href="index.php?controle=utilisateur&action=inscription" style="background: #209cee;">Inscription</a></span>
         </div>

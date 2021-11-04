@@ -13,9 +13,6 @@ Ce qui est fait
 
 Ce qu'il reste à faire
 
-- Navbar changeante en fonction du statut (connecté/déconnecté)
-
-
 => FONCTIONNALITES CLIENT
 
 - Affichage des modèles de voitures (+ quantité en stock)
