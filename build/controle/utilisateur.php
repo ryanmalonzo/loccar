@@ -10,20 +10,22 @@ function connexion() {
 
     if (isset($mail) && isset($motdepasse)) {
         require_once "./modele/utilisateur_bd.php";
+
         if (get($mail, $motdepasse, $attributs)) {
             $_SESSION["utilisateur"] = $attributs[0];
-            echo "Connexion OK";
-            // Rediriger vers ...
+            // Redirection TODO: tableau de bord
+            header("Location: index.php");
         }
 
         else {
-            echo "Connexion pas OK";
-            // Formulaire + message d'erreur
+            $erreur = "Identifiants invalides";
+            require "./vue/utilisateur/connexion.tpl";
         }
     }
 
     else {
-        require_once "./vue/utilisateur/connexion.tpl";
+        $erreur = NULL;
+        require "./vue/utilisateur/connexion.tpl";
     }
 }
 
@@ -35,38 +37,41 @@ function inscription() {
 
     if (isset($nom) && isset($mail) && isset($motdepasse) && isset($societe)) {        
         if (champsValides($nom, $mail, $motdepasse, $societe)) {
+
             // Insérer nouveau client dans BDD
             require_once "./modele/utilisateur_bd.php";
             if (inserer($nom, $mail, $motdepasse, $societe)) {
-                // 2 - Créer la session PHP
+
+                // Créer la session PHP
                 $_SESSION["utilisateur"] = array();
+                
                 // Récupérer l'utilisateur en BDD
+                get($mail, $motdepasse, $_SESSION["utilisateur"]);
                 
-                
-                
-                
-                // 3 - Rediriger vers ... ?
+                // Redirection TODO: tableau de bord
+                header("Location: index.php");
             }
 
             else {
-                // Rediriger vers le formulaire d'inscription
-                // en affichant un message d'erreur
-                echo "Insertion PAS OK :(";
+                $erreur = "Echec de l'inscription, Veuillez recommencer";
+                require "./vue/utilisateur/inscription.tpl";
             }
         }
         else {
-            echo "Une saisie ou plus sont invalides !";
+            $erreur = "Saisie invalide, veuillez recommencer";
+            require "./vue/utilisateur/inscription.tpl";
         }
     }
     
     else {
-        require_once "./vue/utilisateur/inscription.tpl";
+        $erreur = NULL;
+        require "./vue/utilisateur/inscription.tpl";
     }
 }
 
 function deconnexion() {
     if (session_unset()) {
-        echo "Déconnexion réussie. Redirection dans 3...";
+        require_once "./vue/utilisateur/deconnexion.tpl";
         header("refresh:3, url=index.php");
     }
     else header("Location: index.php");
@@ -75,7 +80,7 @@ function deconnexion() {
 
 
 
-// Vérifications de formats
+// Vérification des formats des champs
 
 function champsValides($nom, $mail, $motdepasse, $societe) {
     return nomValide($nom) && mailValide($mail) && motDePasseValide($motdepasse) && societeValide($societe);
@@ -94,10 +99,5 @@ function motDePasseValide($motdepasse) {
 }
 
 function societeValide($societe) {
-    if ($societe == "0") // "Société"
-        return false;
-
-    // Vérifier si le numéro société correspond à une société dans la BDD ?
-    return true;
+    return $societe != 0; // 0 <=> "Société"
 }
-

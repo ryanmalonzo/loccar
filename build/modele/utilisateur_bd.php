@@ -1,14 +1,13 @@
 <?php
 
 function get($mail, $motdepasse, &$attributs = array()) {
-    require_once "./modele/connect.php";
-    $pdo = pdo();
+    require "./modele/connect.php";
 
-    $sql = "SELECT * FROM utilisateur WHERE pseudo = :mail AND motDePasse = :motdepasse";
+    $sql = "SELECT * FROM utilisateur WHERE mail = :mail AND motDePasse = :motdepasse";
+
+    $motdepasse = sha1($motdepasse);
 
     try {
-        $motdepasse = sha1($motdepasse);
-
         $cmd = $pdo->prepare($sql);
         $cmd->bindParam(":mail", $mail);
         $cmd->bindParam(":motdepasse", $motdepasse);
@@ -32,27 +31,22 @@ function get($mail, $motdepasse, &$attributs = array()) {
 }
 
 function inserer($nom, $mail, $motdepasse, $societe) {
-    require_once "./modele/connect.php";
-    $pdo = pdo();
+    require "./modele/connect.php";
 
-    if ($societe == "1") {
-        $role = "admin";
-    } else {
-        $role = "client";
-    }
+    $sql = "INSERT INTO utilisateur VALUES (DEFAULT, :nom, :mail, :motdepasse, :societe, :role)";
 
-    $sql = "INSERT INTO utilisateur (idUtilisateur, nom, pseudo, motDePasse, idEntreprise, role) VALUES (DEFAULT, :nom, :mail, :motdepasse, :societe, :roleU)";
+    $motdepasse = sha1($motdepasse);
+    $societe = intval($societe);
     
-    try {
-        $motdepasse = sha1($motdepasse);
-        $societe = intval($societe);
+    $role = ($societe == 1) ? "admin" : "client";
 
+    try {
         $cmd = $pdo->prepare($sql);
         $cmd->bindParam(":nom", $nom);
         $cmd->bindParam(":mail", $mail);
         $cmd->bindParam(":motdepasse", $motdepasse);
         $cmd->bindParam(":societe", $societe);
-        $cmd->bindParam(":roleU", $role);
+        $cmd->bindParam(":role", $role);
 
         $bool = $cmd->execute();
         //print_r($cmd->errorInfo());

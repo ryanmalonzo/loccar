@@ -26,24 +26,19 @@
 
 <body>
     <header class="header-blue" style="padding-bottom: 120px;margin-bottom: 0px;">
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><a class="navbar-brand" href="index.php">Loccar</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.php" style="color: rgb(255,255,255);">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);">Nos véhicules</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact" style="color: rgb(255,255,255);">Utiliser nos services</a></li>
-                    </ul><span class="navbar-text actions"><a class="login" href="index.php?controle=utilisateur&action=connexion">Connexion</a><a class="btn btn-light action-button" role="button" href="index.php?controle=utilisateur&action=inscription" style="background: #209cee;">Inscription</a> </span>
-                </div>
-            </div>
-        </nav>
+        <?php
+            if (isset($_SESSION["utilisateur"]))
+                require_once "./vue/navbar/accueil_session.tpl";
+            else
+                require_once "./vue/navbar/accueil.tpl";
+        ?>
         <div class="container hero">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 align-self-center">
                     <h1 style="margin-top: 24px;">Loccar</h1>
                     <p>Louer une voiture n'a jamais été aussi simple.</p><button class="btn btn-light btn-lg action-button" type="button">Réserver une voiture</button>
                 </div>
-                <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-none d-xl-flex align-items-xl-center phone-holder"><img class="img-fluid d-xl-flex align-items-xl-center" src="assets/img/sunset-car-vehicle-road-evening-morning-Audi-side-view-dusk-r8-v10-automobile-make-559259.png">
+                <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-none d-xl-flex align-items-xl-center phone-holder"><img class="img-fluid d-xl-flex align-items-xl-center" src="assets/img/sunset-car-vehicle-road-evening-morning-Audi-side-view-dusk-r8-v10-automobile-make-559259.png" style="box-shadow: 0px 0px 10px;">
                 </div>
             </div>
         </div>
@@ -96,21 +91,12 @@
             <h2 class="text-center">Nous contacter</h2>
             <div style="margin-bottom: 16px;"><input class="form-control" type="text" placeholder="Nom"></div>
             <div style="margin-bottom: 16px;"><input class="form-control" type="email" placeholder="Adresse mail"></div>
+            <div style="margin-bottom: 16px;"><input class="form-control" type="text" placeholder="Société"></div>
             <div class="mb-3"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="mb-3"><button class="btn btn-primary" type="submit">ENVOYER</button></div>
+            <div class="mb-3 d-xl-flex justify-content-xl-center"><button class="btn btn-primary" type="submit">ENVOYER</button></div>
         </form>
     </section>
-    <footer class="footer-basic">
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Accueil</a></li>
-            <li class="list-inline-item"><a href="#">Plan du site</a></li>
-            <li class="list-inline-item"><a href="#">A propos</a></li>
-            <li class="list-inline-item"><a href="#">CGU</a></li>
-            <li class="list-inline-item"><a href="#">Politique de confidentialité</a></li>
-        </ul>
-        <p class="copyright">Loccar © 2021</p>
-    </footer>
+    <?php require_once "./vue/footer.tpl" ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
