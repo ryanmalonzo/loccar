@@ -8,7 +8,7 @@ function connexion() {
     $mail = isset($_POST["mail"]) ? $_POST["mail"] : NULL;
     $motdepasse = isset($_POST["motdepasse"]) ? $_POST["motdepasse"] : NULL;
 
-    if (isset($mail) && isset($motdepasse)) {
+    if (isset($mail, $motdepasse)) {
         require_once "./modele/utilisateur_bd.php";
 
         if (get_utilisateur($mail, $motdepasse, $attributs)) {
@@ -35,7 +35,7 @@ function inscription() {
     $motdepasse = isset($_POST["motdepasse"]) ? $_POST["motdepasse"] : NULL;
     $societe = isset($_POST["societe"]) ? $_POST["societe"] : NULL;
 
-    if (isset($nom) && isset($mail) && isset($motdepasse) && isset($societe)) {        
+    if (isset($nom, $mail, $motdepasse, $societe)) {
         if (champsValides($nom, $mail, $motdepasse, $societe)) {
 
             // Insérer nouveau client dans BDD
@@ -70,11 +70,9 @@ function inscription() {
 }
 
 function deconnexion() {
-    if (session_unset()) {
-        require_once "./vue/utilisateur/deconnexion.tpl";
-        header("refresh:3, url=index.php");
-    }
-    else header("Location: index.php");
+    unset($_SESSION["utilisateur"]);
+    require_once "./vue/utilisateur/deconnexion.tpl";
+    header("refresh:3, url=index.php");
 }
 
 
@@ -99,5 +97,5 @@ function motDePasseValide($motdepasse) {
 }
 
 function societeValide($societe) {
-    return $societe != 0; // 0 <=> "Société"
+    return $societe !== 0; // 0 <=> "Société"
 }

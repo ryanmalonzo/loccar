@@ -15,15 +15,9 @@ function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
         $exec = $cmd->execute();
         if ($exec) {
             $attributs = $cmd->fetchAll(PDO::FETCH_ASSOC);
-            if (count($attributs) == 0) {
-                return false;
-            }
-            return true;
-
-        } else {
-            print_r($cmd->errorInfo());
-            return false;
-        }   
+            return count($attributs) === 0;
+        }
+        return false;
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -36,9 +30,9 @@ function inserer($nom, $mail, $motdepasse, $societe) {
     $sql = "INSERT INTO utilisateur VALUES (DEFAULT, :nom, :mail, :motdepasse, :societe, :role)";
 
     $motdepasse = sha1($motdepasse);
-    $societe = intval($societe);
-    
-    $role = ($societe == 1) ? "admin" : "client";
+    $societe = (int) $societe;
+
+    $role = ($societe === 1) ? "admin" : "client";
 
     try {
         $cmd = $pdo->prepare($sql);
@@ -48,9 +42,7 @@ function inserer($nom, $mail, $motdepasse, $societe) {
         $cmd->bindParam(":societe", $societe);
         $cmd->bindParam(":role", $role);
 
-        $bool = $cmd->execute();
-        //print_r($cmd->errorInfo());
-        return $bool;
+        return $cmd->execute();
 
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
