@@ -16,7 +16,7 @@ function getUtilisateur($mail, $motdepasse, &$attributs = array()) {
         $exec = $cmd->execute();
         if ($exec) {
             $attributs = $cmd->fetchAll(PDO::FETCH_ASSOC);
-            return count($attributs) !== 0;
+            return count($attributs) > 0;
         }
         return false;
     } catch (PDOException $e) {

@@ -1,6 +1,6 @@
 {
-  "moteur": "18CV",
-  "boite de vitesse": "automatique",
-  "carburant": "hybride essence electrique",
-  "nbPlaces": 5
+  "Moteur": "18  CV",
+  "Boîte de vitesse": "Automatique",
+  "Carburant": "Hybride, essence, électrique",
+  "Nombre de places": 5
 }

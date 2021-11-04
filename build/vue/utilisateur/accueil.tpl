@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 align-self-center">
                     <h1 style="margin-top: 24px;">Loccar</h1>
-                    <p>Louer une voiture n'a jamais été aussi simple.</p><button class="btn btn-light btn-lg action-button" type="button">Réserver une voiture</button>
+                    <p>Louer une voiture n'a jamais été aussi simple.</p><a class="btn btn-light btn-lg action-button" type="button" role="button" href="index.php?controle=voiture&action=liste">Réserver une voiture</a>
                 </div>
                 <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-none d-xl-flex align-items-xl-center phone-holder"><img class="img-fluid d-xl-flex align-items-xl-center" src="assets/img/sunset-car-vehicle-road-evening-morning-Audi-side-view-dusk-r8-v10-automobile-make-559259.png" style="box-shadow: 0px 0px 10px;">
                 </div>
@@ -35,7 +35,7 @@
                     <div class="box"><img class="img-fluid" src="assets/img/AA8.jpg" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Audi A8</h3>
                         <ul>
-                            <li class="text-start">Moteur 18CV</li>
+                            <li class="text-start">Moteur 18 CV</li>
                             <li class="text-start">Automatique</li>
                             <li class="text-start">Hybride</li>
                             <li class="text-start">5 places</li>
@@ -46,7 +46,7 @@
                     <div class="box"><img class="img-fluid" src="assets/img/Fabia.jpg" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Skoda Fabia</h3>
                         <ul>
-                            <li class="text-start">Moteur 5CV</li>
+                            <li class="text-start">Moteur 5 CV</li>
                             <li class="text-start">Mécanique</li>
                             <li class="text-start">Essence</li>
                             <li class="text-start">5 places</li>
@@ -56,11 +56,11 @@
                 <div class="col-sm-auto col-md-6 col-lg-4 item">
                     <div class="box"><img class="img-fluid" src="assets/img/ClioIV.jpg" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Renault Clio IV</h3>
-                        <ul>
-                            <li class="text-start">Moteur 4CV</li>
-                            <li class="text-start">Automatique</li>
-                            <li class="text-start">Bi-carburant</li>
-                            <li class="text-start">5 places</li>
+                        <ul class="text-start">
+                            <li>Moteur 4 CV</li>
+                            <li>Automatique</li>
+                            <li>Bi-carburant</li>
+                            <li>5 places</li>
                         </ul><a class="learn-more" href="#">Réserver le véhicule</a>
                     </div>
                 </div>

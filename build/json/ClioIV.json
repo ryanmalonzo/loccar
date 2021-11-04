@@ -1,6 +1,6 @@
 {
-  "moteur": "4CV",
-  "boite de vitesse": "automatique",
-  "carburant": "bicarburant essence GPL",
-  "nbPlaces": 5
+  "Moteur": "4 CV",
+  "Boîte de vitesse": "Automatique",
+  "Carburant": "Bicarburation essence-GPL",
+  "Nombre de places": 5
 }

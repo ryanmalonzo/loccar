@@ -1,6 +1,6 @@
 {
-  "moteur": "10CV",
-  "boite de vitesse": "automatique",
-  "carburant": "essence",
-  "nbPlaces": 5
+  "Moteur": "10 CV",
+  "Boîte de vitesse": "Automatique",
+  "Carburant": "Essence",
+  "Nombre de places": 5
 }

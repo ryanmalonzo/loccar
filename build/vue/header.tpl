@@ -12,9 +12,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="assets/css/Article-List.css">
 <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
 <link rel="stylesheet" href="assets/css/Features-Boxed.css">
 <link rel="stylesheet" href="assets/css/Footer-Basic.css">
 <link rel="stylesheet" href="assets/css/Header-Blue.css">
+<link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
 <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+<link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
 <link rel="stylesheet" href="assets/css/styles.css">
