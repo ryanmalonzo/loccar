@@ -11,7 +11,7 @@ function connexion() {
     if (isset($mail, $motdepasse)) {
         require_once "./modele/utilisateur_bd.php";
 
-        if (get_utilisateur($mail, $motdepasse, $attributs)) {
+        if (getUtilisateur($mail, $motdepasse, $attributs)) {
             $_SESSION["utilisateur"] = $attributs[0];
             // Redirection TODO: tableau de bord
             header("Location: index.php");
@@ -46,7 +46,7 @@ function inscription() {
                 $_SESSION["utilisateur"] = array();
                 
                 // Récupérer l'utilisateur en BDD
-                get_utilisateur($mail, $motdepasse, $_SESSION["utilisateur"]);
+                getUtilisateur($mail, $motdepasse, $_SESSION["utilisateur"]);
                 
                 // Redirection TODO: tableau de bord
                 header("Location: index.php");

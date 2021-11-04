@@ -1,6 +1,6 @@
 <?php
 
-function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
+function getUtilisateur($mail, $motdepasse, &$attributs = array()) {
     require_once "./modele/connect.php";
     $pdo = PDO();
 

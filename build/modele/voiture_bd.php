@@ -1,6 +1,6 @@
 <?php
 
-function get_modeles(&$modeles = array()) {
+function getModeles(&$modeles = array()) {
     require_once "./modele/connect.php";
     $pdo = PDO();
 

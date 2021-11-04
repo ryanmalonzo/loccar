@@ -3,7 +3,7 @@
 function liste() {
     require_once "./modele/voiture_bd.php";
 
-    get_modeles($modeles);
+    getModeles($modeles);
 
     // Parsing des caractéristiques JSON de chaque modèle de voiture
     foreach ($modeles as $index => $modele) {
