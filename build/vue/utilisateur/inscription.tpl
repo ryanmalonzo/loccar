@@ -12,7 +12,11 @@
             <div class="image-holder"></div>
             <form action="index.php?controle=utilisateur&action=inscription" method="post">
                 <h2 class="text-center"><strong>Créez </strong>votre compte</h2>
-                <div class="mb-3"><p class="text-danger text-center"><?php echo $erreur ?></p></div>
+                <?php
+                if ($erreur !== NULL) {
+                    printf('<div class="mb-3"><div class="alert alert-danger" role="alert">%s</div></div>', $erreur);
+                }
+                ?>
                 <div class="mb-3"><input class="form-control" type="text" placeholder="Nom" name="nom" required></div>
                 <div class="mb-3"><input class="form-control" type="email" name="mail" placeholder="Adresse mail" required></div>
                 <div class="mb-3"><input class="form-control" type="password" name="motdepasse" placeholder="Mot de passe" required></div>

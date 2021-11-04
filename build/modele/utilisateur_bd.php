@@ -25,7 +25,7 @@ function getUtilisateur($mail, $motdepasse, &$attributs = array()) {
     }
 }
 
-function inserer($nom, $mail, $motdepasse, $societe) {
+function ajouterUtilisateur($nom, $mail, $motdepasse, $societe) {
     require_once "./modele/connect.php";
     $pdo = PDO();
 

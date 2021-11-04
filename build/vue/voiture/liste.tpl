@@ -19,6 +19,8 @@
     <section class="article-list">
         <div class="container">
             <?php
+            require_once "./modele/voiture_bd.php";
+
             $nb = 1;
             echo '<div class="row row-cols-3 justify-content-center articles">';
             foreach ($modeles as $modele) {
@@ -37,7 +39,15 @@
                     }
                     echo '</ul>';
 
-                echo '<a class="btn btn-primary btn-sm mt-3" type="button" role="button" href="#" style="width: 200px;">Louer</a>';
+                printf('<p class="text-dark fw-bolder text-center description">Tarif journalier : %s €</p>', $modele["tarifJournalier"]);
+
+                $max = maxDisponibles($modele["idModele"]);
+
+                if ($max > 0) {
+                    printf('<a class="btn btn-primary btn-sm mt-3 fw-bold" type="button" role="button" href="index.php?controle=voiture&action=louer&id=%s" style="width: 200px;">LOUER</a>', $modele["idModele"]);
+                } else {
+                    printf('<button class="btn btn-secondary btn-sm mt-3 fw-bold" type="button" role="button" style="width: 200px;" disabled>RUPTURE</button>');
+                }
 
                 echo '</div>';
 

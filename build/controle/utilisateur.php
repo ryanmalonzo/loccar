@@ -40,7 +40,7 @@ function inscription() {
 
             // Insérer nouveau client dans BDD
             require_once "./modele/utilisateur_bd.php";
-            if (inserer($nom, $mail, $motdepasse, $societe)) {
+            if (ajouterUtilisateur($nom, $mail, $motdepasse, $societe)) {
 
                 // Créer la session PHP
                 $_SESSION["utilisateur"] = array();
@@ -70,7 +70,7 @@ function inscription() {
 }
 
 function deconnexion() {
-    unset($_SESSION["utilisateur"]);
+    session_unset();
     require_once "./vue/utilisateur/deconnexion.tpl";
     header("refresh:3, url=index.php");
 }

@@ -68,6 +68,8 @@
   letter-spacing: 0.4px;
   line-height: 1;
   outline: none !important;
+  margin-top: 15px;
+  color: #fff;
 }
 
 .contact-clean form .btn:hover {
@@ -80,7 +82,9 @@
 
 .contact-clean form .btn-primary {
   background-color: #055ada !important;
-  margin-top: 15px;
-  color: #fff;
+}
+
+.contact-clean form .btn-secondary {
+  background-color: #5c636a !important;
 }
 
