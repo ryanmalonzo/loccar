@@ -2,6 +2,7 @@
 
 function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
     require "./modele/connect.php";
+    $pdo = PDO();
 
     $sql = "SELECT * FROM utilisateur WHERE mail = :mail AND motDePasse = :motdepasse";
 
@@ -26,6 +27,7 @@ function get_utilisateur($mail, $motdepasse, &$attributs = array()) {
 
 function inserer($nom, $mail, $motdepasse, $societe) {
     require "./modele/connect.php";
+    $pdo = PDO();
 
     $sql = "INSERT INTO utilisateur VALUES (DEFAULT, :nom, :mail, :motdepasse, :societe, :role)";
 
