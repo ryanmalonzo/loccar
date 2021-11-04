@@ -81,22 +81,6 @@
   }
 }
 
-.header-blue .navbar .navbar-nav > li > .dropdown-menu {
-  margin-top: -5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,.1);
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-.header-blue .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item {
-  line-height: 2;
-  color: #37434d;
-}
-
-.header-blue .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item:hover {
-  background: #ebeff1;
-}
-
 .header-blue .action-button, .header-blue .action-button:not(.disabled):active {
   border: 1px solid rgba(255,255,255,0.7);
   border-radius: 40px;
@@ -111,27 +95,6 @@
 
 .header-blue .action-button:hover {
   color: #fff;
-}
-
-.header-blue .navbar form label {
-  color: #d9d9d9;
-}
-
-.header-blue .navbar form .search-field {
-  display: inline-block;
-  width: 80%;
-  background: none;
-  border: none;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  color: #ccc;
-  box-shadow: none;
-  color: inherit;
-  transition: border-bottom-color 0.3s;
-}
-
-.header-blue .navbar form .search-field:focus {
-  border-bottom: 1px solid #ccc;
 }
 
 .header-blue .hero {
@@ -172,46 +135,5 @@
 
 .header-blue .phone-holder {
   text-align: right;
-}
-
-.header-blue div.phone-mockup {
-  position: relative;
-  max-width: 300px;
-  margin: 20px;
-  display: inline-block;
-  z-index: 1;
-}
-
-.header-blue .phone-mockup img.device {
-  width: 100%;
-  height: auto;
-}
-
-.header-blue .phone-mockup .screen {
-  position: absolute;
-  width: 94%;
-  height: 98%;
-  top: 1%;
-  left: 3%;
-  border: 1px solid #444;
-  border-radius: 20px;
-  background-color: #aaa;
-  overflow: hidden;
-  background: url(../../assets/img/screen-content-phone.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-.header-blue .phone-mockup .screen:before {
-  content: '';
-  background-color: #fff;
-  position: absolute;
-  width: 70%;
-  height: 140%;
-  top: -12%;
-  right: -60%;
-  transform: rotate(-19deg);
-  opacity: 0.2;
 }
 
