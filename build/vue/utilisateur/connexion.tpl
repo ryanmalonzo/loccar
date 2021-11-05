@@ -20,8 +20,8 @@
             <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: #209cee;">Connexion</button></div><a class="forgot" href="index.php?controle=utilisateur&action=inscription">Pas encore de compte ? Inscrivez-vous</a>
         </form>
     </section>
+
     <?php require_once "./vue/footer.tpl" ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

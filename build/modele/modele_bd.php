@@ -89,19 +89,21 @@ function getIdVehicules($idModele) {
     }
 }
 
-function setLocation($idUtilisateur, $idVehicule) {
+function getTarifJournalier($idModele) {
     require_once "./modele/connect.php";
     $pdo = PDO();
 
-    $sql = 'UPDATE vehicule
-            SET etatLocation = "location", idUtilisateur = :idUtilisateur
-            WHERE idVehicule = :idVehicule';
+    $sql = "SELECT tarifJournalier FROM modele WHERE idModele = :idModele";
 
     try {
         $cmd = $pdo->prepare($sql);
-        $cmd->bindParam(":idUtilisateur", $idUtilisateur);
-        $cmd->bindParam(":idVehicule", $idVehicule);
-        return $cmd->execute();
+        $cmd->bindParam(":idModele", $idModele);
+        $exec = $cmd->execute();
+
+        if ($exec) {
+            return $cmd->fetchAll(PDO::FETCH_ASSOC)[0]["tarifJournalier"];
+        }
+        return NULL;
 
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");

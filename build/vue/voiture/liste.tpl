@@ -19,12 +19,12 @@
     <section class="article-list">
         <div class="container">
             <?php
-            require_once "./modele/voiture_bd.php";
+            require_once "./modele/vehicule_bd.php";
 
             $nb = 1;
             echo '<div class="row row-cols-3 justify-content-center articles">';
             foreach ($modeles as $modele) {
-                echo '<div class="col-sm-6 col-md-4 item" style="width: 325px;">';
+                echo '<div class="col-sm-6 col-md-4 item" style="width: 325px">';
 
                 $photo = $modele["photo"];
                 printf('<img class="img-fluid" style="height: 200px; width: 300px;" src="./img/%s" alt="%s">', $photo, $photo);
@@ -54,6 +54,7 @@
                 if ($nb === 3) { $nb = 0; echo '</div><div class="row row-cols-3 justify-content-center articles">'; }
                 ++$nb;
             }
+            echo '</div>';
             ?>
         </div>
     </section>
@@ -61,7 +62,6 @@
 
 <?php require_once "./vue/footer.tpl" ?>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

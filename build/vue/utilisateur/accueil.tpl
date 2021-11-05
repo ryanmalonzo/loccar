@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <header class="header-blue" style="padding-bottom: 120px;margin-bottom: 0px;">
+    <header class="header-blue" style="padding-bottom: 120px;margin-bottom: 0;">
         <?php
             if (isset($_SESSION["utilisateur"]))
                 require_once "./vue/navbar/accueil_session.tpl";
@@ -32,36 +32,36 @@
             </div>
             <div class="row justify-content-center features">
                 <div class="col-sm-auto col-md-6 col-lg-auto col-xl-auto item">
-                    <div class="box"><img class="img-fluid" src="assets/img/AA8.jpg" style="height: 200px;">
+                    <div class="box"><img class="img-fluid" src="assets/img/AA8.jpg" alt="Audi A8" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Audi A8</h3>
                         <ul>
                             <li class="text-start">Moteur 18 CV</li>
                             <li class="text-start">Automatique</li>
                             <li class="text-start">Hybride</li>
                             <li class="text-start">5 places</li>
-                        </ul><a class="learn-more" href="#">Réserver le véhicule</a>
+                        </ul><a class="learn-more" href="index.php?controle=voiture&action=louer&id=6">Réserver le véhicule</a>
                     </div>
                 </div>
                 <div class="col-sm-auto col-md-6 col-lg-4 item">
-                    <div class="box"><img class="img-fluid" src="assets/img/Fabia.jpg" style="height: 200px;">
+                    <div class="box"><img class="img-fluid" src="assets/img/Fabia.jpg" alt="Skoda Fabia" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Skoda Fabia</h3>
                         <ul>
                             <li class="text-start">Moteur 5 CV</li>
                             <li class="text-start">Mécanique</li>
                             <li class="text-start">Essence</li>
                             <li class="text-start">5 places</li>
-                        </ul><a class="learn-more" href="#">Réserver le véhicule</a>
+                        </ul><a class="learn-more" href="index.php?controle=voiture&action=louer&id=10">Réserver le véhicule</a>
                     </div>
                 </div>
                 <div class="col-sm-auto col-md-6 col-lg-4 item">
-                    <div class="box"><img class="img-fluid" src="assets/img/ClioIV.jpg" style="height: 200px;">
+                    <div class="box"><img class="img-fluid" src="assets/img/ClioIV.jpg" alt="Renault Clio IV" style="height: 200px;">
                         <h3 class="name" style="padding-top: 20px;">Renault Clio IV</h3>
                         <ul class="text-start">
                             <li>Moteur 4 CV</li>
                             <li>Automatique</li>
                             <li>Bi-carburant</li>
                             <li>5 places</li>
-                        </ul><a class="learn-more" href="#">Réserver le véhicule</a>
+                        </ul><a class="learn-more" href="index.php?controle=voiture&action=louer&id=3">Réserver le véhicule</a>
                     </div>
                 </div>
             </div>
@@ -77,8 +77,8 @@
             <div class="mb-3 d-xl-flex justify-content-xl-center"><button class="btn btn-primary" type="submit">ENVOYER</button></div>
         </form>
     </section>
+
     <?php require_once "./vue/footer.tpl" ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

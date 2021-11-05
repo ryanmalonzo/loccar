@@ -1,7 +1,7 @@
 <?php
 
 function liste() {
-    require_once "./modele/voiture_bd.php";
+    require_once "./modele/modele_bd.php";
 
     getModeles($modeles);
 
@@ -24,13 +24,18 @@ function louer() {
     // Création des factures
     else if (isset($_POST["dateDebut"], $_POST["dateFin"], $_POST["quantite"])) {
 
-        if (strtotime($_POST["dateFin"]) <= strtotime($_POST["dateDebut"])) {
+        // Date de fin vide => fin du mois
+        if ($_POST["dateFin"] === "") {
+            $_POST["dateFin"] = date("Y-m-t", strtotime($_POST["dateDebut"])); // Fin du mois
+        }
+
+        if (strtotime($_POST["dateFin"]) < strtotime($_POST["dateDebut"])) {
             afficherPage("La date de fin doit être supérieure à la date de début");
             return;
         }
 
         // La quantité sélectionnée ne doit pas dépasser le nombre de voitures disponibles pour le modèle
-        require_once "./modele/voiture_bd.php";
+        require_once "./modele/modele_bd.php";
         if ($_POST["quantite"] > maxDisponibles($_GET["id"])) {
             afficherPage("La quantité sélectionnée est supérieure au nombre de voitures disponibles pour ce modèle");
             return;
@@ -47,12 +52,18 @@ function louer() {
         require_once "./modele/facture_bd.php";
         $idUtilisateur = $_SESSION["utilisateur"]["idUtilisateur"];
 
-        foreach ($idVehiculesModele as $idVehicule) {
-            // On actualise les états des véhicules concernés par la location
-            setLocation($idUtilisateur, $idVehicule);
+        require_once "./modele/vehicule_bd.php";
 
-            // On crée les factures
-            ajouterFacture($idUtilisateur, $idVehicule, $_POST["dateDebut"], $_POST["dateFin"]);
+        foreach ($idVehiculesModele as $idVehicule) {
+            // On actualise l'état du véhicule concerné par la location
+            setLocation($idUtilisateur, $idVehicule, "location");
+
+            // Nombre de jours entre date de début et date de fin
+            $jours = (int) date_diff(date_create($_POST["dateDebut"]), date_create($_POST["dateFin"]))->format("%a");
+
+            if ($jours === 0) { $jours = 1; }
+            $montant = $jours * (int) getTarifJournalier($_GET["id"]);
+            ajouterFacture($idUtilisateur, $idVehicule, $_POST["dateDebut"], $_POST["dateFin"], $montant);
         }
 
         afficherPage("Location réalisée avec succès", true);
@@ -65,7 +76,7 @@ function louer() {
 }
 
 function afficherPage($msg, $succes = false) {
-    require_once "./modele/voiture_bd.php";
+    require_once "./modele/modele_bd.php";
     getModele($_GET["id"], $modele);
     $max = maxDisponibles($_GET["id"]);
 
