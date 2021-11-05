@@ -9,7 +9,7 @@
 <?php require_once "./vue/navbar/default_session.tpl" ?>
 
 <div class="container">
-    <h1>Mon espace</h1>
+    <h1>Mes factures</h1>
 
     <?php echo $message ?>
 

@@ -110,3 +110,30 @@ function getTarifJournalier($idModele) {
         die();
     }
 }
+
+function insererModele($nomModele, $caracteristiques, $photo, $tarifJournalier) {
+    require_once "./modele/connect.php";
+    $pdo = PDO();
+
+    $sql = "INSERT INTO modele VALUES (DEFAULT, :nomModele, :caracteristiques, :photo, :tarifJournalier)";
+
+    $tarifJournalier = (int) $tarifJournalier;
+
+    try {
+        $cmd = $pdo->prepare($sql);
+        $cmd->bindParam(":nomModele", $nomModele);
+        $cmd->bindParam(":caracteristiques", $caracteristiques);
+        $cmd->bindParam(":photo", $photo);
+        $cmd->bindParam(":tarifJournalier",$tarifJournalier);
+
+        $exec = $cmd->execute();
+        if ($exec) {
+            return $pdo->lastInsertId();
+        }
+        return NULL;
+
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
+        die();
+    }
+}

@@ -9,7 +9,7 @@
     <?php require_once "./vue/navbar/default.tpl" ?>
     <section class="login-clean">
         <form action="index.php?controle=utilisateur&action=connexion" method="post">
-            <div class="illustration"><i class="icon ion-ios-navigate" style="color: #209cee;border-color: #209cee;"></i></div>
+            <div class="illustration"><i class="icon ion-log-in" style="color: #209cee;border-color: #209cee;"></i></div>
             <?php
             if ($erreur !== NULL) {
                 printf('<div class="mb-3"><div class="alert alert-danger" role="alert">%s</div></div>', $erreur);

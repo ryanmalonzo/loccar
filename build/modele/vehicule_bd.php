@@ -42,3 +42,23 @@ function getIdModele($idVehicule) {
         die();
     }
 }
+
+function insererVehicule($idModele, $etatLocation = "disponible", $idUtilisateur = NULL) {
+    require_once "./modele/connect.php";
+    $pdo = PDO();
+
+    $sql = "INSERT INTO vehicule VALUES (DEFAULT, :idModele, :etatLocation, :idUtilisateur)";
+
+    try {
+        $cmd = $pdo->prepare($sql);
+        $cmd->bindParam(":idModele", $idModele);
+        $cmd->bindParam(":etatLocation", $etatLocation);
+        $cmd->bindParam(":idUtilisateur", $idUtilisateur);
+
+        return $cmd->execute();
+
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
+        die();
+    }
+}

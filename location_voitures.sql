@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS entreprise (
 CREATE TABLE IF NOT EXISTS utilisateur (
    idUtilisateur INT AUTO_INCREMENT,
    nom VARCHAR(50) NOT NULL,
-   mail VARCHAR(50) NOT NULL,
+   mail VARCHAR(50) NOT NULL UNIQUE,
    motDePasse VARCHAR(50) NOT NULL,
    idEntreprise INT NOT NULL,
    role VARCHAR(10) NOT NULL,

@@ -4,10 +4,6 @@ function accueil() {
     require_once "./vue/utilisateur/accueil.tpl";
 }
 
-function dashboard() {
-    header("Location: index.php?controle=facture&action=liste");
-}
-
 function connexion() {
     $mail = isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : NULL;
     $motdepasse = isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : NULL;
