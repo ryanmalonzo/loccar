@@ -1,24 +1,7 @@
-Ce qui est fait
-
-- Inscription
-- Connexion
-- Déconnexion
-
-- Affichage de toutes les voitures
-- Locations + création factures
-
-
 Ce qu'il reste à faire
-
-=> FONCTIONNALITES CLIENT
-
-- Espace client
-	* Affichage des voitures en cours de location + payer facture (voiture redevient dispo après paiement)
 
 => FONCTIONNALITES ADMIN
 
 - Affichage des locations en cours pour chaque entreprise et pour chaque employé de l'entreprise
 - Affichage de toutes les voitures louées pour une entreprise et du cumul des factures associées
-
-- Formulaire d'ajout de voitures
 - Modification du nombre de voitures en stock pour un modèle (+/-)
