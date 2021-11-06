@@ -5,6 +5,11 @@
     <?php include_once "./view/header.tpl" ?>
 
     <style>
+        nav {
+            position: fixed !important;
+            top: 0 !important;
+            width: 100% !important;
+        }
         .form-control {
             height: 38px !important;
         }
@@ -15,7 +20,7 @@
 
 <?php include_once "./view/navbar.tpl" ?>
 
-<section class="contact-clean">
+<section class="contact-clean d-flex flex-column justify-content-center align-items-center" style="height: 100vh;width: 100vw;">
     <form method="post" action="index.php?controle=admin&action=modele" enctype="multipart/form-data">
         <h2 class="text-center">Ajouter un modèle de voiture</h2>
         <?php echo $message ?>

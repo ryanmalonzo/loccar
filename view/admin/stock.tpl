@@ -2,11 +2,18 @@
 <html lang="fr">
 <head>
     <?php require_once "./view/header.tpl" ?>
+    <style>
+        nav {
+            position: fixed !important;
+            top: 0 !important;
+            width: 100% !important;
+        }
+    </style>
 </head>
 <body onload="selectionnerModele()">
 <?php require_once "./view/navbar.tpl" ?>
 
-<section class="contact-clean">
+<section class="contact-clean d-flex flex-column justify-content-center align-items-center" style="width: 100vw;height: 100vh;">
     <form method="post" action="index.php?controle=admin&action=stock">
         <h2 class="text-center">Modifier les quantités disponibles d'un modèle</h2>
         <?php echo $message ?>

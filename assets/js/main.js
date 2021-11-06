@@ -1,12 +1,12 @@
 function selectionnerModele() {
     let id = location.search.split("id=")[1] ? parseInt(location.search.split("id=")[1]) : 0;
     if (id !== 0) {
-        document.getElementById("model").selectedIndex = id;
+        document.getElementById("modele").selectedIndex = id;
     }
 }
 
 function chargerQuantite() {
-    window.location.href = "index.php?controller=admin&action=stock&id=" + document.getElementById("model").value;
+    window.location.href = "index.php?controle=admin&action=stock&id=" + document.getElementById("modele").value;
 }
 
 // Bouton de retour en haut de page

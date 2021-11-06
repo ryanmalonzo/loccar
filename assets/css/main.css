@@ -7,6 +7,23 @@
     color: initial;
 }
 
+body {
+    font-family: "Source Sans Pro", sans-serif !important;
+    overflow-y: scroll;
+}
+
+/* Footer sticky bottom */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
 /* Bouton de retour en haut de page */
 
 #scroll-to-top {

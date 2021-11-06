@@ -11,7 +11,7 @@ function dashboard()
 function modele()
 {
     if (!isset($_SESSION["utilisateur"])) {
-        header("Location: index.php?controller=utilisateur&action=connexion");
+        header("Location: index.php?controle=utilisateur&action=connexion");
     }
     if ($_SESSION["utilisateur"]["role"] !== "admin") {
         header("Location: index.php");
@@ -68,7 +68,7 @@ function modele()
 function stock()
 {
     if (!isset($_SESSION["utilisateur"])) {
-        header("Location: index.php?controller=utilisateur&action=connexion");
+        header("Location: index.php?controle=utilisateur&action=connexion");
     }
     if ($_SESSION["utilisateur"]["role"] !== "admin") {
         header("Location: index.php");

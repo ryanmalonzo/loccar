@@ -20,10 +20,10 @@ function liste()
 function louer()
 {
     if (!isset($_SESSION["utilisateur"])) {
-        header("Location: index.php?controller=utilisateur&action=connexion");
+        header("Location: index.php?controle=utilisateur&action=connexion");
     }
     if (!isset($_GET["id"])) {
-        header("Location: index.php?controller=voiture&action=liste");
+        header("Location: index.php?controle=voiture&action=liste");
     } // Création des factures
     else if (isset($_POST["dateDebut"], $_POST["dateFin"], $_POST["quantite"])) {
 

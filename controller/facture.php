@@ -3,7 +3,7 @@
 function liste()
 {
     if (!isset($_SESSION["utilisateur"])) {
-        header("Location: index.php?controller=utilisateur&action=connexion");
+        header("Location: index.php?controle=utilisateur&action=connexion");
     }
 
     afficherPage();
@@ -12,7 +12,7 @@ function liste()
 function payer()
 {
     if (!isset($_SESSION["utilisateur"], $_GET["id"])) {
-        header("Location: index.php?controller=utilisateur&action=connexion");
+        header("Location: index.php?controle=utilisateur&action=connexion");
     }
 
     require_once "./model/facture_bd.php";
