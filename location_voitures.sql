@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
 
 CREATE TABLE IF NOT EXISTS modele (
 	idModele INT AUTO_INCREMENT NOT NULL,
-	nomModele VARCHAR(25) NOT NULL,
+	nomModele VARCHAR(25) NOT NULL UNIQUE,
 	caracteristiques VARCHAR(200) NOT NULL,
 	photo VARCHAR(200) NOT NULL,
 	tarifJournalier INT NOT NULL,

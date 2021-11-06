@@ -1,3 +1,11 @@
+.link-unstyled {
+    color: initial;
+    text-decoration: none;
+}
+.link-unstyled:hover {
+    color: initial;
+}
+
 /* Bouton de retour en haut de page */
 
 #scroll-to-top {
@@ -7,9 +15,5 @@
     display: none;
     width: 37px;
     height: 37px;
-}
-
-#scroll-to-top:hover {
-    background-color: #055ada !important;
-    border-color: #055ada !important;
+    z-index: 999;
 }

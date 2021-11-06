@@ -2,8 +2,10 @@ Ce qu'il reste à faire
 
 => FONCTIONNALITES ADMIN
 
-- Affichage des locations en cours pour chaque entreprise et pour chaque employé de l'entreprise
+- Affichage des locations en cours pour chaque entreprise (boucler à travers chaque employé de l'entreprise)
 - Affichage de toutes les voitures louées pour une entreprise et du cumul des factures associées
+
+- Page inscription récupérer entreprises
 
 => BONUS
 
