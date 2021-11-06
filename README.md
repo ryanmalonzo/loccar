@@ -6,7 +6,7 @@ Ce repo contient le code source d'un projet d'application web simulant un contex
 De plus amples explications sont données dans [l'énoncé du projet](PWEB%20PROJET%202021.pdf).
 
 Ce projet a été réalisé en suivant l'architecture MVC ([Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)) 
-et à l'aide des langages PHP/SQL. Les différents écrans ou vues du site ont été créées en utilisant le framework Bootstrap.
+et à l'aide des langages PHP/SQL. Les différents écrans ou vues du site ont été créés en utilisant le framework Bootstrap.
 
 ## Utilisation
 
@@ -17,7 +17,7 @@ La mise en place de cette application est effectuée en trois étapes :
 
 ### Connexion
 
-Les mots de passe sont chiffrés avec la fonction SHA-1.  
+Les mots de passe sont chiffrés à l'aide de la fonction SHA-1.  
 À des fins d'essais, les identifiants sont disponibles en clair dans le fichier `mdpSHA1.xlsx`.  
 
 Aussi, par défaut, tout utilisateur peut créer un compte administrateur (société "Loccar" lors de l'inscription).
