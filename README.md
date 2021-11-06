@@ -22,7 +22,7 @@ Les mots de passe sont chiffrés à l'aide de la fonction SHA-1.
 
 Aussi, par défaut, tout utilisateur peut créer un compte administrateur (société "Loccar" lors de l'inscription).
 
-### Versions
+## Versions
 
 * PHP : 5.6.40
 * MySQL : 5.7.31
