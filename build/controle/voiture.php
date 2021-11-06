@@ -17,8 +17,11 @@ function liste() {
 }
 
 function louer() {
-    if (!isset($_SESSION["utilisateur"], $_GET["id"])) {
+    if (!isset($_SESSION["utilisateur"])) {
         header("Location: index.php?controle=utilisateur&action=connexion");
+    }
+    if (!isset($_GET["id"])) {
+        header("Location: index.php?controle=voiture&action=liste");
     }
 
     // Création des factures
@@ -26,7 +29,7 @@ function louer() {
 
         // Date de fin vide => fin du mois
         if ($_POST["dateFin"] === "") {
-            $_POST["dateFin"] = date("Y-m-t", strtotime($_POST["dateDebut"])); // Fin du mois
+            $_POST["dateFin"] = date("Y-m-t", strtotime($_POST["dateDebut"]));
         }
 
         if (strtotime($_POST["dateFin"]) < strtotime($_POST["dateDebut"])) {
@@ -80,11 +83,11 @@ function afficherPage($msg, $succes = false) {
     getModele($_GET["id"], $modele);
     $max = maxDisponibles($_GET["id"]);
 
-    if (!$succes) {
-        $message = '<div class="alert alert-danger" role="alert">' . $msg. '</div>';
+    if ($succes) {
+        $message = '<div class="alert alert-success" role="alert">' . $msg. '</div>';
     }
     else {
-        $message = '<div class="alert alert-success" role="alert">' . $msg. '</div>';
+        $message = '<div class="alert alert-danger" role="alert">' . $msg. '</div>';
     }
 
     if ($msg === NULL) {

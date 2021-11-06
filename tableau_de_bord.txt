@@ -4,4 +4,8 @@ Ce qu'il reste à faire
 
 - Affichage des locations en cours pour chaque entreprise et pour chaque employé de l'entreprise
 - Affichage de toutes les voitures louées pour une entreprise et du cumul des factures associées
-- Modification du nombre de voitures en stock pour un modèle (+/-)
+
+=> BONUS
+
+- Dashboard
+- Fusionner navbars

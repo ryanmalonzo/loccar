@@ -32,7 +32,7 @@
             foreach ($factures as $facture) {
                 echo '<tr>';
                 printf('<td class="d-xl-flex justify-content-xl-center"><img class="img-fluid" src="./img/%s" alt="%s" width="200px" height="100px"></td>', $facture["photo"], $facture["photo"]);
-                printf('<td class="text-center align-middle"><p style="margin: 0;">%s</p></td>', $facture["nomModele"]);
+                printf('<td class="text-center align-middle"><p style="margin: 0;">%s</p></td>', htmlspecialchars($facture["nomModele"]));
                 printf('<td class="text-center align-middle"><p style="margin: 0;">%s</p></td>', $facture["dateDebut"]);
                 printf('<td class="text-center align-middle"><p style="margin: 0;">%s</p></td>', $facture["dateFin"]);
                 printf('<td class="text-center align-middle"><p style="margin: 0;">%s €</p></td>', number_format($facture["montant"], 0, ',', ' '));

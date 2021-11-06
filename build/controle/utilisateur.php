@@ -5,8 +5,8 @@ function accueil() {
 }
 
 function connexion() {
-    $mail = isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : NULL;
-    $motdepasse = isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : NULL;
+    $mail = isset($_POST["mail"]) ? $_POST["mail"] : NULL;
+    $motdepasse = isset($_POST["motdepasse"]) ? $_POST["motdepasse"] : NULL;
 
     if (isset($mail, $motdepasse)) {
         require_once "./modele/utilisateur_bd.php";
@@ -30,10 +30,10 @@ function connexion() {
 }
 
 function inscription() {
-    $nom = isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : NULL;
-    $mail = isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : NULL;
-    $motdepasse = isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : NULL;
-    $societe = isset($_POST["societe"]) ? htmlspecialchars($_POST["societe"]) : NULL;
+    $nom = isset($_POST["nom"]) ? $_POST["nom"] : NULL;
+    $mail = isset($_POST["mail"]) ? $_POST["mail"] : NULL;
+    $motdepasse = isset($_POST["motdepasse"]) ? $_POST["motdepasse"] : NULL;
+    $societe = isset($_POST["societe"]) ? $_POST["societe"] : NULL;
 
     if (isset($nom, $mail, $motdepasse, $societe)) {
         if (champsValides($nom, $mail, $motdepasse, $societe)) {

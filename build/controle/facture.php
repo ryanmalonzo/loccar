@@ -17,7 +17,7 @@ function payer() {
 
     setEtatReglement($_SESSION["utilisateur"]["idUtilisateur"], $_GET["id"], true);
     require_once "./modele/vehicule_bd.php";
-    setLocation($_SESSION["utilisateur"]["idUtilisateur"], $_GET["id"], "disponible");
+    setLocation(NULL, $_GET["id"], "disponible");
 
     afficherPage("Paiement effectué avec succès");
 }

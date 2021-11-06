@@ -10,7 +10,7 @@
 <body>
     <ul>
         <li><a href="index.php?controle=admin&action=modele">Ajouter un modèle de voiture</a></li>
-        <li><a href="index.php?controle=admin&action=stock">Modifier le stock d'un modèle</a></li>
+        <li><a href="index.php?controle=admin&action=stock">Modifier les quantités disponibles d'un modèle</a></li>
     </ul>
 </body>
 </html>

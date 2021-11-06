@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <header class="header-blue" style="padding-bottom: 120px;margin-bottom: 0;">
+    <header class="header-blue" style="padding-bottom: 120px; margin-bottom: 0;">
         <?php
             if (isset($_SESSION["utilisateur"]))
                 require_once "./vue/navbar/accueil_session.tpl";

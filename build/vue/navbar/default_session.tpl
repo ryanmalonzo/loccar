@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button sticky-top">
     <div class="container"><a class="navbar-brand" href="index.php">Loccar</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav me-auto">

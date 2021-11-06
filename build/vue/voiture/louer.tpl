@@ -11,7 +11,7 @@
 
 <section class="contact-clean">
     <form method="post" action="index.php?controle=voiture&action=louer&id=<?php echo $_GET["id"] ?>"><img class="img-fluid" src="./img/<?php echo $modele["photo"] ?>" alt="<?php echo $modele["photo"] ?>" style="margin-bottom: 0px;">
-        <h4 class="text-center" style="margin-top: 8px;"><?php echo $modele["nomModele"] ?></h4>
+        <h4 class="text-center" style="margin-top: 8px;"><?php echo htmlspecialchars($modele["nomModele"]) ?></h4>
         <p class="text-center"><?php echo $modele["tarifJournalier"] ?> € / jour</p>
         <?php echo $message ?>
         <div class="mb-3"><label class="form-label">Date de début *</label><input class="form-control" type="date" name="dateDebut" required></div>

@@ -30,12 +30,12 @@
                 printf('<img class="img-fluid" style="height: 200px; width: 300px;" src="./img/%s" alt="%s">', $photo, $photo);
 
                 $nom = $modele["nomModele"];
-                printf('<h3 class="name">%s</h3>', ucwords($nom));
+                printf('<h3 class="name">%s</h3>', htmlspecialchars($nom));
 
                 $cars = $modele["caracteristiques"];
                 echo '<ul class="list-unstyled text-start description">';
                     foreach ($cars as $cle => $valeur) {
-                    printf('<li>%s : %s</li>', $cle, $valeur);
+                    printf('<li>%s : %s</li>', $cle, htmlspecialchars($valeur));
                     }
                     echo '</ul>';
 

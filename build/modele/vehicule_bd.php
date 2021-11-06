@@ -62,3 +62,22 @@ function insererVehicule($idModele, $etatLocation = "disponible", $idUtilisateur
         die();
     }
 }
+
+function retirerVehiculeDisponible($idModele) {
+    require_once "./modele/connect.php";
+    $pdo = PDO();
+
+    // Une suppression par appel
+    $sql = 'DELETE FROM vehicule WHERE idModele = :idModele AND etatLocation = "disponible" AND idUtilisateur IS NULL LIMIT 1';
+
+    try {
+        $cmd = $pdo->prepare($sql);
+        $cmd->bindParam(":idModele", $idModele);
+
+        return $cmd->execute();
+
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
+        die();
+    }
+}
