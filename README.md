@@ -12,7 +12,7 @@ et à l'aide des langages PHP/SQL. Les différents écrans ou vues du site ont �
 
 La mise en place de cette application est effectuée en trois étapes :
 * Importation de la base de données (`location_voitures.sql`)
-* Édition du fichier `/model/connect.php` pour les identifiants BDD
+* Édition du fichier `model/connect.php` pour les identifiants BDD
 * Exécution d'un serveur web sur `index.php`
 
 ### Connexion
