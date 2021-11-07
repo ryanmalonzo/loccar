@@ -15,7 +15,6 @@ function setLocation($idUtilisateur, $idVehicule, $etat)
         $cmd->bindParam(":idUtilisateur", $idUtilisateur);
         $cmd->bindParam(":idVehicule", $idVehicule);
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -38,7 +37,6 @@ function getIdModele($idVehicule)
             return $cmd->fetchAll(PDO::FETCH_ASSOC)[0]["idModele"];
         }
         return NULL;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -59,7 +57,6 @@ function insererVehicule($idModele, $etatLocation = "disponible", $idUtilisateur
         $cmd->bindParam(":idUtilisateur", $idUtilisateur);
 
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
         die();
@@ -79,7 +76,6 @@ function retirerVehiculeDisponible($idModele)
         $cmd->bindParam(":idModele", $idModele);
 
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
         die();

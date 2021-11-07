@@ -23,6 +23,8 @@ function modele()
             afficherPage("Saisie invalide, veuillez recommencer", "modele", false);
         }
 
+        // Nom du fichier image = nom du modèle avec première lettre de chaque 
+        // mot en majuscule, sans espace
         $nomFichier = str_replace(" ", "", ucwords($_POST["nomModele"]));
 
         $fichierImage = "";
@@ -39,10 +41,10 @@ function modele()
 
         // Construire les caractéristiques JSON
         $data = array(
-            "Moteur" => $_POST["moteur"],
-            "Boîte de vitesse" => $_POST["boiteVitesse"],
-            "Carburant" => $_POST["carburant"],
-            "Nombre de places" => (int) $_POST["nbPlaces"]
+            "moteur" => $_POST["moteur"],
+            "boiteVitesse" => $_POST["boiteVitesse"],
+            "carburant" => $_POST["carburant"],
+            "nbPlaces" => (int) $_POST["nbPlaces"]
         );
         $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
@@ -58,7 +60,6 @@ function modele()
         for ($i = 0; $i < (int) $_POST["quantite"]; ++$i) {
             insererVehicule($idModele);
         }
-
         afficherPage("Nouveau modèle ajouté", "modele", true);
     } else {
         afficherPage(NULL, "modele");

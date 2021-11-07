@@ -16,7 +16,6 @@ function ajouterFacture($idUtilisateur, $idVehicule, $dateDebut, $dateFin, $mont
         $cmd->bindParam(":montant", $montant);
 
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
         die();
@@ -40,7 +39,6 @@ function getFacturesUtilisateur($idUtilisateur, &$factures = array())
             return count($factures) > 0;
         }
         return false;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -65,7 +63,6 @@ function setEtatReglement($idUtilisateur, $idVehicule, $etatReglement)
         $cmd->bindParam(":idVehicule", $idVehicule);
 
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec d'update : " . $e->getMessage() . "\n");
         die();

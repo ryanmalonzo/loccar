@@ -6,59 +6,60 @@
 </head>
 
 <body>
-<?php include_once "./view/navbar.tpl" ?>
+    <?php include_once "./view/navbar.tpl" ?>
 
-<div class="container">
-    <h1>Mes factures</h1>
+    <div class="container">
+        <h1>Mes factures</h1>
 
-    <?php echo $message ?>
+        <?php echo $message ?>
 
-    <div class="table-responsive border rounded" style="margin-top: 16px;">
-        <table class="table table-striped" style="margin: 0">
-            <thead>
-            <tr>
-                <th class="text-center">Photo</th>
-                <th class="text-center">Modèle</th>
-                <th class="text-center">Date de début</th>
-                <th class="text-center">Date de fin</th>
-                <th class="text-center">Montant</th>
-                <th class="text-center">Paiement</th>
-            </tr>
-            </thead>
+        <div class="table-responsive border rounded" style="margin-top: 16px;">
+            <table class="table table-striped" style="margin: 0">
+                <thead>
+                    <tr>
+                        <th class="text-center">Photo</th>
+                        <th class="text-center">Modèle</th>
+                        <th class="text-center">Date de début</th>
+                        <th class="text-center">Date de fin</th>
+                        <th class="text-center">Montant</th>
+                        <th class="text-center">Paiement</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-            <?php
-            foreach ($factures as $facture) {
-                echo '<tr>';
-                printf('
+                <tbody>
+                    <?php
+                    foreach ($factures as $facture) {
+                        echo '<tr>';
+                        printf('
             <td class="d-xl-flex justify-content-xl-center"><img class="img-fluid" src="./assets/vehicule/img/%s"
                                                                  alt="%s" width="200px" height="100px"></td>
             ', $facture["photo"], $facture["photo"]);
-                printf('
+                        printf('
             <td class="text-center align-middle"><p style="margin: 0;">%s</p></td>
             ', htmlspecialchars($facture["nomModele"]));
-                printf('
+                        printf('
             <td class="text-center align-middle"><p style="margin: 0;">%s</p></td>
             ', $facture["dateDebut"]);
-                printf('
+                        printf('
             <td class="text-center align-middle"><p style="margin: 0;">%s</p></td>
             ', $facture["dateFin"]);
-                printf('
+                        printf('
             <td class="text-center align-middle"><p style="margin: 0;">%s €</p></td>
             ', number_format($facture["montant"], 0, ',', ' '));
-                printf('
+                        printf('
             <td class="text-center align-middle"><a class="btn btn-dark" type="button"
                                                     href="index.php?controle=facture&action=payer&id=%s">PAYER</a></td>
             ', $facture["idVehicule"]);
-                echo '</tr>';
-            }
-            ?>
-            </tbody>
-        </table>
+                        echo '</tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
-<?php include_once "./view/footer.tpl" ?>
+    <?php include_once "./view/footer.tpl" ?>
 
 </body>
+
 </html>

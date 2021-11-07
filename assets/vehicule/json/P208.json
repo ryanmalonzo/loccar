@@ -1,6 +1,6 @@
 {
-  "Moteur": "7 CV",
-  "Boîte de vitesse": "Automatique",
-  "Carburant": "Diesel",
-  "Nombre de places": 5
+  "moteur": "7 CV",
+  "boiteVitesse": "Automatique",
+  "carburant": "Diesel",
+  "nbPlaces": 5
 }

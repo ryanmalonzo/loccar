@@ -24,8 +24,14 @@ function louer()
     }
     if (!isset($_GET["id"])) {
         header("Location: index.php?controle=voiture&action=liste");
-    } // Création des factures
+    }
+    
+    // Création des factures
     else if (isset($_POST["dateDebut"], $_POST["dateFin"], $_POST["quantite"])) {
+        if (!is_numeric($_POST["quantite"]) || $_POST["quantite"] < 1) {
+            afficherPage("Veuillez saisir une quantité valide", false);
+            return;
+        }
 
         // Date de fin vide => fin du mois
         if ($_POST["dateFin"] === "") {

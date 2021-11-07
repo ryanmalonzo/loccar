@@ -16,7 +16,6 @@ function getModeles(&$modeles = array())
             return count($modeles) > 0;
         }
         return false;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -40,7 +39,6 @@ function getModele($idModele, &$modele = array())
             return count($modele) > 0;
         }
         return false;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -63,7 +61,6 @@ function maxDisponibles($idModele)
             return $cmd->fetchAll(PDO::FETCH_ASSOC)[0]["max"];
         }
         return NULL;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -86,7 +83,6 @@ function getIdVehicules($idModele)
             return $cmd->fetchAll(PDO::FETCH_ASSOC);
         }
         return NULL;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -109,7 +105,6 @@ function getTarifJournalier($idModele)
             return $cmd->fetchAll(PDO::FETCH_ASSOC)[0]["tarifJournalier"];
         }
         return NULL;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -137,7 +132,6 @@ function insererModele($nomModele, $caracteristiques, $photo, $tarifJournalier)
             return $pdo->lastInsertId();
         }
         return NULL;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
         die();

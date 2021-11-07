@@ -1,6 +1,6 @@
 {
-  "Moteur": "8 CV",
-  "Boîte de vitesse": "Mécanique",
-  "Carburant": "Diesel",
-  "Nombre de places": 5
+  "moteur": "8 CV",
+  "boiteVitesse": "Mécanique",
+  "carburant": "Diesel",
+  "nbPlaces": 5
 }

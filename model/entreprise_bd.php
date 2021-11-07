@@ -16,7 +16,6 @@ function getEntreprises(&$entreprises)
             return count($entreprises) > 0;
         }
         return false;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -41,7 +40,6 @@ function getEmployes($idEntreprise, &$employes)
             return count($employes) > 0;
         }
         return false;
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();

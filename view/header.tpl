@@ -2,8 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <title>Loccar | Gestion et location de voitures</title>
 <meta property="og:type" content="website">
-<meta name="description"
-      content="Loccar est un service de location de voitures pour professionnels. Réservez une flotte de véhicules et gérez vos locations de manière flexible.">
+<meta name="description" content="Loccar est un service de location de voitures pour professionnels. Réservez une flotte de véhicules et gérez vos locations de manière flexible.">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">

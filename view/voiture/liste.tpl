@@ -31,9 +31,11 @@
                 $cars = $modele["caracteristiques"];
                 echo '<ul class="list-unstyled text-start description">';
 
-                foreach ($cars as $cle => $valeur) {
-                    printf('<li>%s : %s</li>', $cle, htmlspecialchars($valeur));
-                }
+                printf('<li>Moteur : %s</li>', htmlspecialchars($cars["moteur"]));
+                printf('<li>Boîte de vitesse : %s</li>', htmlspecialchars($cars["boiteVitesse"]));
+                printf('<li>Carburant : %s</li>', htmlspecialchars($cars["carburant"]));
+                printf('<li>Nombre de places : %s</li>', htmlspecialchars($cars["nbPlaces"]));
+
                 echo '</ul>';
 
                 printf('<p class="text-dark fw-bolder text-center description">Tarif journalier : %s €</p>',

@@ -47,7 +47,6 @@ function ajouterUtilisateur($nom, $mail, $motdepasse, $societe)
         $cmd->bindParam(":role", $role);
 
         return $cmd->execute();
-
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insertion : " . $e->getMessage() . "\n");
         die();
