@@ -34,4 +34,4 @@ Aussi, par défaut, tout utilisateur peut créer un compte administrateur (soci�
 * PESSEY Julie
 
 Groupe 204 (semestre 3)  
-Projet PWEB 2021 - 2022 à l'IUT de Paris
+Projet PWEB 2021 - 2022 à l'IUT de Paris - Rives de Seine
