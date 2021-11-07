@@ -18,7 +18,7 @@ La mise en place de cette application est effectuée en quatre étapes :
 
 ### Connexion
 
-Les mots de passe sont chiffrés à l'aide de la fonction SHA-1.  
+Les mots de passe sont chiffrés à l'aide de la fonction de hachage SHA-1.  
 À des fins d'essais, les identifiants sont disponibles en clair dans le fichier `mdpSHA1.xlsx`.  
 
 Aussi, par défaut, tout utilisateur peut créer un compte administrateur (société "Loccar" lors de l'inscription).
