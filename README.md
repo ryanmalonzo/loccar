@@ -2,7 +2,7 @@
 
 # Location de voitures
 
-[Ce repo](https://github.com/yusa-ai/pweb/) contient le code source d'un projet d'application web simulant un contexte de location de voitures pour entreprises. 
+[Ce repo](https://github.com/yusa-ai/pweb) contient le code source d'un projet d'application web simulant un contexte de location de voitures pour entreprises. 
 De plus amples explications sont données dans [l'énoncé du projet](PWEB%20PROJET%202021.pdf).
 
 Ce projet a été réalisé en suivant l'architecture MVC ([Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)) 
