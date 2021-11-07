@@ -2,7 +2,7 @@
 
 # Location de voitures
 
-Ce repo contient le code source d'un projet d'application web simulant un contexte de location de voitures pour entreprises. 
+[Ce repo](https://github.com/yusa-ai/pweb/) contient le code source d'un projet d'application web simulant un contexte de location de voitures pour entreprises. 
 De plus amples explications sont données dans [l'énoncé du projet](PWEB%20PROJET%202021.pdf).
 
 Ce projet a été réalisé en suivant l'architecture MVC ([Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)) 
@@ -10,10 +10,11 @@ et à l'aide des langages PHP/SQL. Les différents écrans ou vues du site ont �
 
 ## Utilisation
 
-La mise en place de cette application est effectuée en trois étapes :
+La mise en place de cette application est effectuée en quatre étapes :
 * Importation de la base de données (`location_voitures.sql`) sur un serveur MySQL
-* Édition du fichier `model/connect.php` pour les identifiants BDD
-* Exécution d'un serveur web sur `index.php`
+* Édition du fichier `model/connect.php` concernant les identifiants relatifs à la connexion au serveur de BDD
+* Exécution d'un serveur web à la racine du projet
+* Ouverture d'`index.php` depuis un navigateur Internet
 
 ### Connexion
 
