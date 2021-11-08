@@ -1,6 +1,8 @@
-![car-dealership](./assets/github-repo-logo.svg)
+![Car dealership](./assets/github-repo-logo.svg)
 
 # Location de voitures
+
+![License](https://img.shields.io/github/license/yusa-ai/pweb?style=flat-square) ![Project language](https://img.shields.io/badge/language-PHP-blue?style=flat-square)
 
 [Ce repo](https://github.com/yusa-ai/pweb) contient le code source d'un projet d'application web simulant un contexte de location de voitures pour entreprises. 
 De plus amples explications sont données dans [l'énoncé du projet](PWEB%20PROJET%202021.pdf).
