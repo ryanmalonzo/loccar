@@ -1,6 +1,6 @@
 ![Car dealership](./assets/github-repo-logo.svg)
 
-# Location de voitures
+# Loccar
 
 ![License](https://img.shields.io/github/license/yusa-ai/pweb?style=flat-square) ![Project language](https://img.shields.io/badge/language-PHP-blue?style=flat-square)
 
